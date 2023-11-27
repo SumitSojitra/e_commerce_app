@@ -1,0 +1,29 @@
+{
+  "data" : [
+    {
+      "img" : "assets/images/homePage/option.png",
+      "txt" : "All",
+      "widht": 60.0
+    },{
+      "img" : "https://tse4.mm.bing.net/th?id=OIP.tTLRS7GI7fI6xZd3LT0tmQHaG4&pid=Api&P=0&h=180",
+      "txt" : "Footwear",
+      "widht":100.0
+    },{
+      "img" : "https://www.wearesync.co.uk/wp-content/uploads/2020/09/apple-watch-series-6-gold-stainless-steel-case-with-gold-milanese-loop.jpg",
+      "txt" : "Watch",
+      "widht":80.0
+    },{
+      "img" : "https://tse2.mm.bing.net/th?id=OIP.e2z78U78R4NKJxaCuEaZKAHaIs&pid=Api&P=0&h=180",
+      "txt" : "chair",
+      "widht":74.0
+    },{
+      "img" : "https://tse2.mm.bing.net/th?id=OIP.PybafTA7Rh-srHZpOk2_XgHaJn&pid=Api&P=0&h=180",
+      "txt" : "Plants",
+      "widht":80.0
+    },{
+      "img" : "https://i5.walmartimages.com/asr/1cce3103-8a32-47e1-820b-f5d7659e5864.7e945cfef208b35b722de5e31f262372.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff",
+      "txt" : "Jeans",
+      "widht":74.0
+    }
+  ]
+}

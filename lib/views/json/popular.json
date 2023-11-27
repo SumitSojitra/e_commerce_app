@@ -1,0 +1,36 @@
+{
+  "data" : [
+    {
+      "hight" : 180.0,
+      "color" : "Color(0xffebf3c4)",
+      "img": "assets/images/homePage/nike.png",
+      "title": "Nike Shoes",
+      "price" : "$12.00"
+
+    },
+    {
+      "hight" : 200.0,
+      "color" : "Color(0xffebf3c4)",
+      "img": "assets/images/homePage/chair.png",
+      "title": "Chair",
+      "price" : "$30.00"
+
+    },
+    {
+      "hight" : 190.0,
+      "color" : "Color(0xffebf3c4)",
+      "img": "assets/images/homePage/watch.png",
+      "title": "Watch",
+      "price" : "$10.00"
+
+    },
+    {
+      "hight" : 210.0,
+      "color" : "Color(0xffebf3c4)",
+      "img": "assets/images/homePage/plants.png",
+      "title": "Plants",
+      "price" : "$7.00"
+
+    }
+  ]
+}
