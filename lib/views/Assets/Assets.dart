@@ -1,3 +1,6 @@
+import 'package:flutter/painting.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 class AppAssets {
   static String onboardingFirst = 'assets/images/onboard/onboarding-first.png';
   static String onboardingSecond =
@@ -13,6 +16,9 @@ class AppAssets {
   static String chair = "assets/images/homePage/chair.png";
   static String watch = "assets/images/homePage/watch.png";
   static String plants = "assets/images/homePage/plants.png";
+
+  static TextStyle textStyle =
+      GoogleFonts.montserrat(fontWeight: FontWeight.w600);
 }
 
 // https://i.pinimg.com/originals/67/bd/79/67bd792017fe64abf88a73655425f6eb.png

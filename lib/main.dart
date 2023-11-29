@@ -1,3 +1,4 @@
+import 'package:extra_project/views/screen/allItemPage.dart';
 import 'package:extra_project/views/screen/navigationPage.dart';
 import 'package:extra_project/views/screen/onBoardPage.dart';
 import 'package:extra_project/views/screen/signInPage.dart';
@@ -23,6 +24,10 @@ void main() {
       GetPage(
         name: '/SignUp',
         page: () => SignUpPage(),
+      ),
+      GetPage(
+        name: '/AllItemPage',
+        page: () => AllItemPage(),
       ),
     ],
   ));

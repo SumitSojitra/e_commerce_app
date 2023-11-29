@@ -7,6 +7,7 @@ import 'package:extra_project/views/Assets/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:like_button/like_button.dart';
@@ -270,9 +271,22 @@ class _HomePageState extends State<HomePage> {
               ),
               Gap(14),
               ////
-              Text(
-                "Popular",
-                style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Popular",
+                    style: AppAssets.textStyle,
+                  ),
+                  Text(
+                    "View All",
+                    style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.grey,
+                      fontSize: 10,
+                    ),
+                  )
+                ],
               ),
               Gap(12),
 
@@ -288,7 +302,7 @@ class _HomePageState extends State<HomePage> {
                         .map((e) => PopularModel.fromMap(data: e))
                         .toList();
                     return Container(
-                      height: 420,
+                      height: 410,
                       child: GridView.builder(
                           physics: NeverScrollableScrollPhysics(),
                           gridDelegate:
@@ -299,47 +313,55 @@ class _HomePageState extends State<HomePage> {
                                   crossAxisSpacing: 12),
                           itemCount: myData.length,
                           itemBuilder: (BuildContext context, int i) {
-                            return Container(
-                              // height: 4,
-                              width: 155,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: colors[i],
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Gap(10),
-                                    Image(
-                                      alignment: Alignment.center,
-                                      image: AssetImage(myData[i].img),
-                                      height: 78,
-                                    ),
-                                    Gap(24),
-                                    Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        myData[i].title,
-                                        style: GoogleFonts.montserrat(
-                                            color: Colors.grey.shade700,
-                                            fontWeight: FontWeight.w600),
+                            return InkWell(
+                              borderRadius: BorderRadius.circular(12),
+                              // splashColor: Color(0xffa5be27),
+                              onTap: () {
+                                Get.toNamed('/AllItemPage');
+                              },
+                              child: Container(
+                                // height: 4,
+                                width: 155,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: colors[i],
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Gap(10),
+                                      Image(
+                                        alignment: Alignment.center,
+                                        image: AssetImage(myData[i].img),
+                                        height: myData[i].imgHight,
                                       ),
-                                    ),
-                                    Gap(1),
-                                    Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        myData[i].price,
-                                        style: GoogleFonts.montserrat(
-                                            // color: Colors.grey.shade700,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
+                                      Gap(24),
+                                      Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          myData[i].title,
+                                          style: GoogleFonts.montserrat(
+                                              color: Colors.grey.shade700,
+                                              fontWeight: FontWeight.w600),
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                      Gap(1),
+                                      Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          myData[i].price,
+                                          style: GoogleFonts.montserrat(
+                                              // color: Colors.grey.shade700,
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             );
