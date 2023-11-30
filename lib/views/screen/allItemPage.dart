@@ -1,10 +1,13 @@
 import 'dart:convert';
 
+import 'package:extra_project/Model/popularModel.dart';
 import 'package:extra_project/Model/shoesModel.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
@@ -22,21 +25,29 @@ class _AllItemPageState extends State<AllItemPage> {
   TextEditingController textController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    PopularModel data =
+        ModalRoute.of(context)!.settings.arguments as PopularModel;
+
     return Scaffold(
       backgroundColor: AppColors.bg,
       appBar: AppBar(
-        backgroundColor: AppColors.bg,
-        centerTitle: true,
-        actions: [Icon(IconlyLight.bag), Gap(14)],
-        leading: Image.asset(
-          AppAssets.option,
-          scale: 7,
-        ),
-        // title: Text(
-        //   "Home",
-        //   style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-        // ),
-      ),
+          backgroundColor: AppColors.bg,
+          centerTitle: true,
+          actions: [Icon(IconlyLight.bag), Gap(14)],
+          leading: IconButton(
+            onPressed: () {
+              Get.back;
+            },
+            icon: Icon(
+              CupertinoIcons.back,
+              color: AppColors.kPrimary,
+            ),
+          )
+          // title: Text(
+          //   "Home",
+          //   style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+          // ),
+          ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -138,7 +149,7 @@ class _AllItemPageState extends State<AllItemPage> {
               ),
               Gap(10),
               FutureBuilder(
-                future: rootBundle.loadString("lib/views/json/shoes.json"),
+                future: rootBundle.loadString(data.json),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     String data = snapshot.data!;
@@ -162,66 +173,73 @@ class _AllItemPageState extends State<AllItemPage> {
                         itemBuilder: (BuildContext context, int i) {
                           return Stack(
                             children: [
-                              Container(
-                                height: 200,
-                                width: 155,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  color: AppColors.kWhite,
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Gap(10),
-                                      Image(
-                                        alignment: Alignment.center,
-                                        image: AssetImage(myData[i].img),
-                                        height: 78,
-                                      ),
-                                      Gap(24),
-                                      Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Text(
-                                          myData[i].title,
-                                          style: GoogleFonts.montserrat(
-                                              color: Colors.grey.shade700,
-                                              fontWeight: FontWeight.w600),
+                              GestureDetector(
+                                onTap: () {
+                                  Get.toNamed('/DetailPage',
+                                      arguments: myData[i]);
+                                },
+                                child: Container(
+                                  height: 200,
+                                  width: 155,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(12),
+                                    color: AppColors.kWhite,
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Gap(10),
+                                        Image(
+                                          alignment: Alignment.center,
+                                          image: AssetImage(myData[i].img),
+                                          height: 78,
                                         ),
-                                      ),
-                                      Gap(1),
-                                      Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: Text(
-                                          myData[i].price,
-                                          style: GoogleFonts.montserrat(
-                                              // color: Colors.grey.shade700,
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold),
+                                        Gap(24),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            myData[i].title,
+                                            style: GoogleFonts.montserrat(
+                                                color: Colors.grey.shade700,
+                                                fontWeight: FontWeight.w600),
+                                          ),
                                         ),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.centerLeft,
-                                        child: RatingBar.builder(
-                                          initialRating: 3,
-                                          itemSize: 14,
-                                          minRating: 1,
-                                          direction: Axis.horizontal,
-                                          allowHalfRating: true,
-                                          itemCount: 5,
-                                          itemPadding:
-                                              const EdgeInsets.symmetric(
-                                                  horizontal: 0),
-                                          itemBuilder: (context, _) => Icon(
-                                              Icons.star,
-                                              color: AppColors.kPrimary),
-                                          onRatingUpdate: (rating) {},
+                                        Gap(1),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            myData[i].price,
+                                            style: GoogleFonts.montserrat(
+                                                // color: Colors.grey.shade700,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold),
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: RatingBar.builder(
+                                            initialRating: 3,
+                                            itemSize: 14,
+                                            minRating: 1,
+                                            direction: Axis.horizontal,
+                                            allowHalfRating: true,
+                                            itemCount: 5,
+                                            itemPadding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 0),
+                                            itemBuilder: (context, _) => Icon(
+                                                Icons.star,
+                                                color: AppColors.kPrimary),
+                                            onRatingUpdate: (rating) {},
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -231,12 +249,13 @@ class _AllItemPageState extends State<AllItemPage> {
                                 child: Container(
                                   height: 30,
                                   width: 30,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: AppColors.kPrimary),
                                   alignment: Alignment.center,
-                                  child: Icon(
-                                    Icons.add,
+                                  child: const Icon(
+                                    IconlyLight.bag,
+                                    size: 18,
                                     color: AppColors.kWhite,
                                   ),
                                 ),
@@ -247,7 +266,7 @@ class _AllItemPageState extends State<AllItemPage> {
                       ),
                     );
                   }
-                  return CircularProgressIndicator();
+                  return const CircularProgressIndicator();
                 },
               ),
             ],

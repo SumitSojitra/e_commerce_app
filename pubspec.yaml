@@ -74,9 +74,16 @@ flutter:
   assets:
     - assets/images/onboard/
     - assets/images/homePage/
+    - assets/images/allShoes/
+    - assets/images/allChair/
+    - assets/images/allWatch/
+    - assets/images/allPlant/
     - lib/views/json/catagories.json
     - lib/views/json/popular.json
     - lib/views/json/shoes.json
+    - lib/views/json/watch.json
+    - lib/views/json/chair.json
+    - lib/views/json/plant.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

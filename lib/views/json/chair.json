@@ -1,0 +1,44 @@
+{
+  "data" : [
+    {
+      "img" : "assets/images/allChair/c1.jpeg",
+      "title" : "Chair",
+      "price" : "$120"
+    },
+    {
+      "img" : "assets/images/allChair/c2.jpeg",
+      "title" : "Chair",
+      "price" : "$100"
+    },
+    {
+      "img" : "assets/images/allChair/c3.jpeg",
+      "title" : "Chair",
+      "price" : "$140"
+    },
+    {
+      "img" : "assets/images/allChair/c4.jpeg",
+      "title" : "Chair",
+      "price" : "$130"
+    },
+    {
+      "img" : "assets/images/allChair/c5.jpeg",
+      "title" : "Chair",
+      "price" : "$160"
+    },
+    {
+      "img" : "assets/images/allChair/c6.jpeg",
+      "title" : "Chair",
+      "price" : "$150"
+    },
+    {
+      "img" : "assets/images/allChair/c7.jpeg",
+      "title" : "Chair",
+      "price" : "$124"
+    },
+    {
+      "img" : "assets/images/allChair/c8.jpeg",
+      "title" : "Chair",
+      "price" : "$143"
+    }
+  ]
+}

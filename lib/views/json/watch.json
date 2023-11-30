@@ -1,0 +1,44 @@
+{
+  "data" : [
+    {
+      "img" : "assets/images/allWatch/w1.jpeg",
+      "title" : "Watch",
+      "price" : "$120"
+    },
+    {
+      "img" : "assets/images/allWatch/w2.jpeg",
+      "title" : "Watch",
+      "price" : "$100"
+    },
+    {
+      "img" : "assets/images/allWatch/w3.jpeg",
+      "title" : "Watch",
+      "price" : "$140"
+    },
+    {
+      "img" : "assets/images/allWatch/w4.jpeg",
+      "title" : "Watch",
+      "price" : "$130"
+    },
+    {
+      "img" : "assets/images/allWatch/w5.jpeg",
+      "title" : "Watch",
+      "price" : "$160"
+    },
+    {
+      "img" : "assets/images/allWatch/w6.jpeg",
+      "title" : "Watch",
+      "price" : "$150"
+    },
+    {
+      "img" : "assets/images/allWatch/w7.jpeg",
+      "title" : "Watch",
+      "price" : "$124"
+    },
+    {
+      "img" : "assets/images/allWatch/w8.jpeg",
+      "title" : "Watch",
+      "price" : "$143"
+    }
+  ]
+}

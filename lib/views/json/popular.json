@@ -6,7 +6,8 @@
       "color" : "Color(0xffebf3c4)",
       "img": "assets/images/homePage/nike.png",
       "title": "Sport Shoes",
-      "price" : "$12.00"
+      "price" : "$12.00",
+      "json": "lib/views/json/shoes.json"
 
     },
     {
@@ -15,7 +16,8 @@
       "color" : "Color(0xffebf3c4)",
       "img": "assets/images/homePage/chair.png",
       "title": "Chair",
-      "price" : "$30.00"
+      "price" : "$30.00",
+      "json": "lib/views/json/chair.json"
 
     },
     {
@@ -24,7 +26,8 @@
       "color" : "Color(0xffebf3c4)",
       "img": "assets/images/homePage/watch.png",
       "title": "Watch",
-      "price" : "$10.00"
+      "price" : "$10.00",
+      "json": "lib/views/json/watch.json"
 
     },
     {
@@ -33,7 +36,8 @@
       "color" : "Color(0xffebf3c4)",
       "img": "assets/images/homePage/plants.png",
       "title": "Plants",
-      "price" : "$7.00"
+      "price" : "$7.00",
+      "json": "lib/views/json/plant.json"
 
     }
   ]

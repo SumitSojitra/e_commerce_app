@@ -7,6 +7,7 @@ class PopularModel {
   String img;
   String title;
   String price;
+  String json;
 
   PopularModel({
     required this.img,
@@ -15,6 +16,7 @@ class PopularModel {
     required this.hight,
     required this.price,
     required this.imgHight,
+    required this.json,
   });
 
   factory PopularModel.fromMap({required Map data}) {
@@ -25,6 +27,7 @@ class PopularModel {
       hight: data['hight'],
       imgHight: data['imgHight'],
       price: data['price'],
+      json: data['json'],
     );
   }
 }

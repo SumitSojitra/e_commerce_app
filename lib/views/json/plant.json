@@ -1,0 +1,44 @@
+{
+  "data" : [
+    {
+      "img" : "assets/images/allPlant/p1.jpeg",
+      "title" : "Plant",
+      "price" : "$120"
+    },
+    {
+      "img" : "assets/images/allPlant/p2.jpeg",
+      "title" : "Plant",
+      "price" : "$100"
+    },
+    {
+      "img" : "assets/images/allPlant/p3.jpeg",
+      "title" : "Plant",
+      "price" : "$140"
+    },
+    {
+      "img" : "assets/images/allPlant/p4.jpeg",
+      "title" : "Plant",
+      "price" : "$130"
+    },
+    {
+      "img" : "assets/images/allPlant/p5.jpeg",
+      "title" : "Plant",
+      "price" : "$160"
+    },
+    {
+      "img" : "assets/images/allPlant/p6.jpeg",
+      "title" : "Plant",
+      "price" : "$150"
+    },
+    {
+      "img" : "assets/images/allPlant/p7.jpeg",
+      "title" : "Plant",
+      "price" : "$124"
+    },
+    {
+      "img" : "assets/images/allPlant/p8.jpeg",
+      "title" : "Plant",
+      "price" : "$143"
+    }
+  ]
+}

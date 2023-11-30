@@ -18,6 +18,7 @@ class AppColors {
   static const Color kGrey70 = Color(0xFF78828A);
   static const Color kGrey100 = Color(0xFF171725);
   static const Color bg = Color(0xfff8f8f8);
+  static const Color dt = Color(0xfff2f2f2);
 
   static const Color pop1 = Color(0xffebf3c4);
   static const Color pop2 = Color(0xfff8e3e3);

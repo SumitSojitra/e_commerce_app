@@ -317,7 +317,8 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(12),
                               // splashColor: Color(0xffa5be27),
                               onTap: () {
-                                Get.toNamed('/AllItemPage');
+                                Get.toNamed('/AllItemPage',
+                                    arguments: myData[i]);
                               },
                               child: Container(
                                 // height: 4,
