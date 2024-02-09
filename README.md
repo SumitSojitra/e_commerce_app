@@ -1,5 +1,4 @@
-# extra_project
-
+# e-commerce App
 A new Flutter project.
 
 ## Getting Started
